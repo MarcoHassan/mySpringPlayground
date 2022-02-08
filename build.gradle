@@ -1,0 +1,35 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.0.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+    // Api documentation 
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.4'
+    implementation 'io.swagger:swagger-annotations:1.6.4'
+    
+    // ok; now you can see the endpoints at: http://localhost:8080/v3/api-docs/
+    // you can change this in your spring configuraitons application.yml file
+    
+    // http://localhost:8080/swagger-ui/index.html - you will find a page with your APIs here.
+    // can change as well in your application config file.
+    
+    // spring
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
