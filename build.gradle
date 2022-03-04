@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.0.RELEASE'
+	id 'org.springframework.boot' version '2.4.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	
 	id 'java'
@@ -25,9 +25,37 @@ dependencies {
     // http://localhost:8080/swagger-ui/index.html - you will find a page with your APIs here.
     // can change as well in your application config file.
     
-    // spring
+    // spring - starter
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+
+	// Azure Libraries // 
+	
+	// This is a nice library Valerio pointed you to
+	// the basic idea is that on their website https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md
+	// you find the spring version compatible version library.
+	// then when applying this one you should not specify versions for the azure sdk
+	// bom will select the relevant version that is compatible with that Spring release
+	implementation platform('com.azure:azure-sdk-bom:1.0.1')
+
+	
+	// Blob
+	implementation 'com.azure:azure-storage-blob' 
+	
+	// For managing authentication in the cloud
+	implementation 'com.azure:azure-identity:1.4.4'	
+	
+	// Dot-env Library
+	implementation 'io.github.cdimascio:java-dotenv:3.0.0'
+	
+	// Spring - Reactor
+	implementation 'io.projectreactor:reactor-core' 
+	
+	// For testing reactor steps
+	testImplementation 'io.projectreactor:reactor-test'
+	
+	
 }
 
 test {
