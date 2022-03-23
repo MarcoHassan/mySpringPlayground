@@ -8,10 +8,11 @@ import org.springframework.context.ApplicationContext;
 public class Application {
 
     public static void main(String[] args) {
-		// ApplicationContext ctx = SpringApplication.run(Application.class, args);
+		
+    	ApplicationContext ctx = SpringApplication.run(Application.class, args); // entry point Spring Application
 		
     	// Testing Reactor in Srping - did not want to return to endpoint
-		SpringReactor.createAFlux_just();
+		// SpringReactor.createAFlux_just();
 	} 
 
 }
