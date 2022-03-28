@@ -33,38 +33,38 @@ dependencies {
     // can change as well in your application config file.
     
     // spring - starter MVC
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	
-	// Spring - WebFlux - Asynchronous Backend
-	// it's an either or between this and MVC. include the right starter depending on the runtime 
-	// you want to develop on. 
-	// implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	// Azure Libraries // 
-	
-	// This is a nice library Valerio pointed you to
-	// the basic idea is that on their website https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md
-	// you find the spring version compatible version library.
-	// then when applying this one you should not specify versions for the azure sdk
-	// bom will select the relevant version that is compatible with that Spring release
-	implementation platform('com.azure:azure-sdk-bom:1.0.1')
+    // Spring - WebFlux - Asynchronous Backend
+    // it's an either or between this and MVC. include the right starter depending on the runtime 
+    // you want to develop on. 
+    // implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
-	// Blob
-	implementation 'com.azure:azure-storage-blob' 
-	
-	// For managing authentication in the cloud
-	implementation 'com.azure:azure-identity:1.4.4'	
-	
-	// Dot-env Library
-	implementation 'io.github.cdimascio:java-dotenv:3.0.0'
-	
-	// Spring - Reactor
-	implementation 'io.projectreactor:reactor-core' 
-	
-	// For testing reactor steps
-	testImplementation 'io.projectreactor:reactor-test'
+
+    // Azure Libraries // 
+
+    // This is a nice library Valerio pointed you to
+    // the basic idea is that on their website https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md
+    // you find the spring version compatible version library.
+    // then when applying this one you should not specify versions for the azure sdk
+    // bom will select the relevant version that is compatible with that Spring release
+    implementation platform('com.azure:azure-sdk-bom:1.0.1')
+
+    // Blob
+    implementation 'com.azure:azure-storage-blob' 
+
+    // For managing authentication in the cloud
+    implementation 'com.azure:azure-identity:1.4.4'	
+
+    // Dot-env Library
+    implementation 'io.github.cdimascio:java-dotenv:3.0.0'
+
+    // Spring - Reactor
+    implementation 'io.projectreactor:reactor-core' 
+
+    // For testing reactor steps
+    testImplementation 'io.projectreactor:reactor-test'
 	
 }
 
