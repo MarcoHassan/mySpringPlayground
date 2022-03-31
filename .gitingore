@@ -1,6 +1,18 @@
+// Build tools setting // 
 .gradle/**
 .mvn/**
+
+// Project and classpath //
 .project
 .settings/**
-bin/**
 .classpath
+
+// Binary etc. // 
+build/**
+bin/**
+
+// Data etc. //
+data/**
+
+// Kudu script - important to ignore. have credentials there//
+kudu.sh
