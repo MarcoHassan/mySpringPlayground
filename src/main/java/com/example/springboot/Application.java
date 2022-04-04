@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication @ComponentScan(basePackages = { "com.example.swagger","com.example.blob"} )
+@SpringBootApplication @ComponentScan(basePackages = { "com.example.springboot", "com.example.swagger","com.example.blob", "com.example.event"} )
 
 public class Application {
 
