@@ -20,4 +20,5 @@
 
 // Environment Variables
 **/environmentVariables.java
+**/dotEnvCheck.java
 .env

@@ -39,7 +39,14 @@ dependencies {
     // you want to develop on. 
     // Not that important so far as in either case you can not work in a reactive way with relational DBs yet.
     // implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    
 
+    ////////////////////////////////////////
+    // Spring DevTool - Automatic Restart //
+    ////////////////////////////////////////
+    
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    
     ////////////////////////
     // System Environment //
     ////////////////////////
@@ -50,7 +57,15 @@ dependencies {
     // Probably something similar to the one of Markus - i.e. store such an .env to Blob and then read from there
     // there everything should be more less integrated and do not need the connection as here.
     
-    // implementation 'io.github.cdimascio:java-dotenv:3.0.0'
+    implementation 'io.github.cdimascio:java-dotenv:3.0.0'
+    
+    ////////////
+    // Lombok //
+    ////////////
+    
+    implementation 'org.projectlombok:lombok'
+    
+    
 
     /////////////////////
     // Azure Libraries // 
