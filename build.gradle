@@ -9,6 +9,9 @@ plugins {
     
     // Microsoft Webapp Plug-in - can deploy directly to webapp via that plug-in //
     id "com.microsoft.azure.azurewebapp" version "1.2.0"
+    
+    // Lombok Plug In - Gradle has to understand the Annotations as well when compiling the project //
+    // id "io.freefair.lombok" version "6.4.2"
 }
 
 group = 'com.example'
@@ -62,10 +65,15 @@ dependencies {
     ////////////
     // Lombok //
     ////////////
-    
+
+    // Check at the plug in and understand if you can work through it instead of this. 
+    // Keep moving for now.
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
     implementation 'org.projectlombok:lombok'
-    
-    
 
     /////////////////////
     // Azure Libraries // 
