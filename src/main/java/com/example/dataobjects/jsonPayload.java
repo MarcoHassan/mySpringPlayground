@@ -1,13 +1,14 @@
 package com.example.dataobjects;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL) 
 public class jsonPayload {
 	
     @JsonProperty("Id")
@@ -24,6 +25,10 @@ public class jsonPayload {
 		this.message = message;
 		this.fileLocation = fileLocation;
 		
+	}
+	
+	public jsonPayload(String Id) {
+		this.Id = Id;
 	}
 
 }
