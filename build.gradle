@@ -43,6 +43,10 @@ dependencies {
     // Not that important so far as in either case you can not work in a reactive way with relational DBs yet.
     // implementation 'org.springframework.boot:spring-boot-starter-webflux'
     
+    // Hetoas - for programmatically shipping endpoints //
+    
+    implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+    
 
     ////////////////////////////////////////
     // Spring DevTool - Automatic Restart //
